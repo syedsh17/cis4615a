@@ -1,7 +1,7 @@
 // VNA00-J: Ensure visibility when accessing shared primitive variables
 public class R08_VNA00_J {
     static final class ControlledStop implements Runnable {
-        private boolean done = false;
+        private volatile boolean done = false;
         long iterations = 0;
 
         @Override
