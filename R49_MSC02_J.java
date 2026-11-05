@@ -1,9 +1,9 @@
 // MSC02-J: Generate strong random numbers
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class R49_MSC02_J {
     public static void main(String[] args) {
-        Random number = new Random(123L);
+        SecureRandom number = new SecureRandom();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 10; i++) {
             sb.append(number.nextInt(21)).append(' ');
