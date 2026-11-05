@@ -5,10 +5,10 @@ public class R04_STR03_J {
     public static void main(String[] args) {
         BigInteger original = new BigInteger("530500452766");
         BigInteger x = original;
-        byte[] byteArray = x.toByteArray();
-        String s = new String(byteArray);
-        byteArray = s.getBytes();
-        x = new BigInteger(byteArray);
+        String s = x.toString();
+        byte[] byteArray = s.getBytes();
+        String ns = new String(byteArray);
+        x = new BigInteger(ns);
 
         System.out.println("Original : " + original);
         System.out.println("Recovered: " + x);
