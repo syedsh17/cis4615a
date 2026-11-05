@@ -6,8 +6,10 @@ import java.io.InputStream;
 public class R13_FIO08_J {
     public static int countBytes(InputStream in) throws IOException {
         int count = 0;
+        int inbuff;
         byte data;
-        while ((data = (byte) in.read()) != -1) {
+        while ((inbuff = in.read()) != -1) {
+            data = (byte) inbuff;
             count++;
         }
         return count;
